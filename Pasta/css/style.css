@@ -1,0 +1,223 @@
+.navbar{
+    border-bottom: 1px solid transparent;
+    width: 99.7%;
+    height: 130px;
+}
+.logo{
+    border: 1px solid transparent;
+    width: 9%;
+    height: 130px;
+    float: left;
+    margin-left: 70px;
+
+}
+#img-logo{
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    border: 1px solid transparent;
+    width: 75%;
+    height: 130px;
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 70px;
+}
+.menu-ul{
+    list-style: none;
+    float: right;
+    margin-top: 40px;
+}
+.menu-ul li{
+    float: left;
+    margin-left: 11px;
+    font-size: 24px;
+}
+.menu-ul li a{
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+    font-weight: 600;
+}
+.banner{
+    border: 1px solid transparent;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+#banner-img{
+    width: 100%;
+    height: 100%;
+
+}
+#banner-bottom-img{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: 600;
+
+}
+.main{
+    border: 1px solid transparent;
+    width: 80%;
+    height: 1000px;
+    margin: auto;
+}
+.card{
+    border: 1px solid black;
+    width: 30%;
+    height: 400px;
+    margin: 10px;
+    float: left;
+}
+#cardimg{
+    width: 100%;
+    height: 100%;
+}
+.banner-bottom{
+    border: 1px solid transparent;
+    width: 99.7%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+
+}
+.banner-text{
+    border: 1px solid transparent;
+    width: 54%;
+    height: 300px;
+    background-color: white;
+    opacity: 0.7;
+    position: absolute;
+    right: 80px;
+    top: 100px;
+
+}
+.banner-text p{
+ font-size: 20px;
+ margin-left: 23px;
+}
+
+.banner-text button{
+    font-size: 20px;
+    margin-left: 23px;
+    background-color: #f29297;
+    color: white;
+    height: 55px;
+    border-radius: 7px;
+    border: none;
+   }
+.more {
+    font-size: 20px;
+    margin-left: 410px;
+    background-color: #f29297;
+    color: white;
+    height: 55px;
+    border-radius: 7px;
+    border: none;
+}
+#about {
+    max-width: 850px;
+    margin: 0 auto 3rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, #ffe6f0, #ffd6eb);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #4a3a3a;
+
+    position: relative;
+    top: 8rem;
+  }
+  
+  
+  
+  #about h2 {
+    text-align: center;
+    color: #c13f75;
+    font-size: 2rem;
+    margin-top: -6.05rem; /* 👈 Schrift höher im Kasten */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  
+  #about p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  #about strong {
+    color: #a62d64;
+  }
+  
+  #about em {
+    color: #d94c89;
+    font-style: italic;
+  }
+ html {
+  scroll-behavior: smooth;
+}
+
+a.button-scroll {
+  display: inline-block;
+  background-color: #fda8aa; /* exakte Farbe vom unteren Button */
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+a.button-scroll:hover {
+  background-color: #f28c8c;
+}
+
+.profilbild {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+

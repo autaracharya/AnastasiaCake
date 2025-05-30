@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine Torten – Anastasia Torten</title>
+
+  <!-- Fonts & Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff8fb;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .menu-ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .menu-ul li a:hover {
+      color: #d44c7c;
+    }
+
+    .main {
+      padding: 40px 5%;
+      text-align: center;
+    }
+
+    .main h1 {
+      font-size: 2rem;
+      color: #c13f75;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo img {
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/Logo1.png" alt="Logo" />
+    </div>
+    <ul class="menu-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueberanastasia.html">ÜberAnastasia</a></li>
+      <li><a href="torten.html">Torten</a></li>
+      <li><a href="onlineshop.html">Onlineshop</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="amfrage.html">Anfrage</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1 data-aos="fade-up">Weitere Beispiele aus meiner Backstube</h1>
+    <div class="gallery">
+      <div class="card" data-aos="zoom-in"><img src="img/A1.jpeg" alt="Torte A1" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A2.jpeg" alt="Torte A2" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A3.jpeg" alt="Torte A3" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A4.jpeg" alt="Torte A4" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A6.jpeg" alt="Torte A6" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A8.jpeg" alt="Torte A8" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A9.jpeg" alt="Torte A9" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A10.jpeg" alt="Torte A10" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A11.jpeg" alt="Torte A11" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A12.jpeg" alt="Torte A12" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A14.jpeg" alt="Torte A14" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A16.jpeg" alt="Torte A16" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A17.jpeg" alt="Torte A17" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A18.jpeg" alt="Torte A18" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A19.jpeg" alt="Torte A19" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A20.jpeg" alt="Torte A20" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A21.jpeg" alt="Torte A21" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A23.jpeg" alt="Torte A23" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A24.jpeg" alt="Torte A24" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A25.jpeg" alt="Torte A25" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A26.jpeg" alt="Torte A26" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A27.jpeg" alt="Torte A27" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A28.jpeg" alt="Torte A28" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A29.jpeg" alt="Torte A29" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A30.jpeg" alt="Torte A30" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A31.jpeg" alt="Torte A31" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A32.jpeg" alt="Torte A32" /></div>
+      <div class="card" data-aos="zoom-in"><img src="img/A33.jpeg" alt="Torte A33" /></div>
+    </div>
+  </div>
+
+  <!-- Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

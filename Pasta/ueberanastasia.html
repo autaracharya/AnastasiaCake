@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über Anastasia – Torten mit Liebe</title>
+
+  <!-- Fonts & Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4ec);
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .menu-ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .menu-ul li a:hover {
+      color: #d44c7c;
+    }
+
+    #about {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background-color: #fbcadd;
+    
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #c13f75;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+   .profilbild {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+    #about p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+      color: #444;
+    }
+
+    #about strong {
+      color: #a62d64;
+    }
+
+    #about em {
+      color: #d94c89;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo img {
+        height: 60px;
+      }
+
+      #about {
+        margin: 30px 15px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/Logo1.png" alt="Logo" />
+    </div>
+    <ul class="menu-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueberanastasia.html">ÜberAnastasia</a></li>
+      <li><a href="torten.html">Torten</a></li>
+      <li><a href="onlineshop.html">Onlineshop</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="amfrage.html">Anfrage</a></li>
+    </ul>
+  </div>
+
+  <section id="about" data-aos="fade-up">
+    <h2>Über mich</h2>
+    <img src="img/Anastasia.jpg" alt="Anastasia Deutsch" class="profilbild" />
+    <p>Hallo und herzlich willkommen!</p>
+    <p>
+      Mein Name ist <strong>Anastasia Deutsch</strong>, meine Leidenschaft fürs Backen begleitet mich nun schon seit über 20 Jahren.
+      Auch wenn ich aktuell noch <strong>Betriebswirtschaftslehre studiere</strong> und gerade an meiner
+      <strong>Bachelorarbeit</strong> schreibe, war meine wahre Liebe schon immer das kreative Gestalten von Torten und süßen Kunstwerken.
+    </p>
+    <p>
+      Was mit einfachen Kuchen in der Familienküche begann, entwickelte sich schnell zu einem Herzenshobby,
+      dem ich über die Jahre hinweg mit wachsender Begeisterung nachgegangen bin. Neben dem Studium, Beruf und Alltag habe ich
+      mir stets Zeit genommen, Neues auszuprobieren, meine Fähigkeiten zu erweitern und meine Kreativität in Zuckermasse,
+      Blüten und Figuren auszuleben.
+    </p>
+    <p>
+      Ein ganz besonderes Kapitel war mein <em>Backkurs „Süße Werkstatt – Torten für Kindergeburtstage“</em>,
+      bei dem ich mein Wissen und meine Erfahrung mit anderen teilen durfte. Gemeinsam tauchten wir ein in die Welt der
+      Zuckerdekoration – modellierten, färbten, kreierten, lachten ... und natürlich naschten! 🧁
+    </p>
+    <p>
+      Auch wenn ich momentan keine Kurse mehr anbiete, schlägt mein Herz weiterhin für das Handwerk.
+      Ich freue mich immer, wenn ich Menschen mit meinen süßen Kreationen ein Lächeln ins Gesicht zaubern kann.
+    </p>
+    <p>
+      Danke, dass du hier bist!<br />
+      Herzlichst,<br />
+      <strong>Anastasia</strong>
+    </p>
+  </section>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

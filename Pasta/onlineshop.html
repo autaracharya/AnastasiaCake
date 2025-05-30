@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onlineshop – Anastasia Torten</title>
+
+  <!-- Fonts & Animation -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff8fb;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .menu-ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .menu-ul li a:hover {
+      color: #d44c7c;
+    }
+
+    .main {
+      padding: 40px 5%;
+      text-align: center;
+    }
+
+    .main h1 {
+      font-size: 2rem;
+      color: #c13f75;
+      margin-bottom: 30px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      max-width: 280px;
+      width: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      padding: 15px;
+      font-size: 18px;
+      color: #c13f75;
+      background-color: #fff0f5;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo img {
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/Logo1.png" alt="Logo" />
+    </div>
+    <ul class="menu-ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueberanastasia.html">ÜberAnastasia</a></li>
+      <li><a href="torten.html">Torten</a></li>
+      <li><a href="onlineshop.html">Onlineshop</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="amfrage.html">Anfrage</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1 data-aos="fade-up">Onlineshop</h1>
+    <div class="shop-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="img/A27.jpeg" alt="Cup Cakes" />
+        <h3>Cup Cakes</h3>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/A18.jpeg" alt="Macarons" />
+        <h3>Macarons</h3>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/A4.jpeg" alt="Cake Pops" />
+        <h3>Cake Pops</h3>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/A16.jpeg" alt="Klassiker" />
+        <h3>Klassiker</h3>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/A10.jpeg" alt="Kuchen" />
+        <h3>Kuchen</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
