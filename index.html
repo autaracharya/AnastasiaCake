@@ -29,6 +29,7 @@
       background: #fff;
       border-bottom: 1px solid #eee;
       flex-wrap: wrap;
+      position: relative;
     }
 
     .logo img {
@@ -53,6 +54,15 @@
 
     .menu-ul li a:hover {
       color: #d44c7c;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      user-select: none;
+      color: #333;
+      padding: 0 15px;
     }
 
     .banner {
@@ -176,11 +186,34 @@
       background-color: #e05278;
     }
 
-    @media (max-width: 600px) {
-      .navbar {
-        padding: 20px;
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+      }
+
+      .menu-ul {
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        display: none;
+        margin-top: 60px;
+        background: white;
+        padding: 15px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .menu-ul.show {
+        display: flex;
+      }
+
+      .menu-ul li {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+        border-top: 1px solid #eee;
       }
 
       .logo img {
@@ -188,12 +221,12 @@
       }
 
       .logo {
-  background-color: #fbcadd; /* soft pink */
-  padding: 10px;
-  border-radius: 12px;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        background-color: #fbcadd;
+        padding: 10px;
+        border-radius: 12px;
+        display: inline-block;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
       .banner-text {
         left: 5%;
@@ -211,51 +244,6 @@
         font-size: 14px;
       }
     }
-   .hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  user-select: none;
-  color: #333;
-  padding: 0 15px;
-}
-
-/* For mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 30px;
-  }
-
-  .navbar {
-    position: relative;
-  }
-
-  .menu-ul {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    margin-top: 60px;
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-  }
-
-  .menu-ul.show {
-    display: flex;
-  }
-
-  .menu-ul li {
-    width: 100%;
-    text-align: left;
-    padding: 10px 0;
-    border-top: 1px solid #eee;
-  }
-}
- 
   </style>
 </head>
 
@@ -264,9 +252,7 @@
     <div class="logo">
       <img src="img/Logo1.png" alt="Anastasia Torten Logo" />
     </div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-  <ul class="menu-ul">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="menu-ul">
       <li><a href="index.html">Home</a></li>
       <li><a href="ueberanastasia.html">ÜberAnastasia</a></li>
@@ -292,10 +278,9 @@
       <div class="card" data-aos="zoom-in"><img src="img/A35.jpg" alt="Torte 6" /></div>
     </div>
 
-<a href="torten.html" class="button-scroll" data-aos="fade-down" data-aos-delay="100">
-  Weitere individuelle süße Kreationen
-</a>
-
+    <a href="torten.html" class="button-scroll" data-aos="fade-down" data-aos-delay="100">
+      Weitere individuelle süße Kreationen
+    </a>
   </div>
 
   <div class="banner-bottom">
@@ -312,12 +297,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    function toggleMenu() {
+      document.querySelector('.menu-ul').classList.toggle('show');
+    }
   </script>
-<script>
-  function toggleMenu() {
-    document.querySelector('.menu-ul').classList.toggle('show');
-  }
-</script>
-
 </body>
 </html>
