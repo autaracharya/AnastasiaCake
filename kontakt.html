@@ -110,6 +110,16 @@
       }
     }
 
+    /* ✅ ADDED: hamburger menu style */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      user-select: none;
+      color: #333;
+      padding: 0 15px;
+    }
+
     @media (max-width: 600px) {
       .navbar {
         padding: 20px;
@@ -125,14 +135,52 @@
         padding: 30px 20px;
       }
     }
+
+    /* ✅ ADDED: responsive nav menu toggle logic */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+      }
+
+      .navbar {
+        position: relative;
+      }
+
+      .menu-ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 60px;
+        background: white;
+        padding: 15px 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+      }
+
+      .menu-ul.show {
+        display: flex;
+      }
+
+      .menu-ul li {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- ✅ REPLACED: original navbar with responsive version -->
   <div class="navbar">
     <div class="logo">
-      <img src="img/Logo1.png" alt="Logo" />
+      <img src="img/Logo1.png" alt="Anastasia Torten Logo" />
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="menu-ul">
       <li><a href="index.html">Home</a></li>
       <li><a href="ueberanastasia.html">ÜberAnastasia</a></li>
@@ -153,5 +201,12 @@
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+
+  <!-- ✅ ADDED: JS toggle function for hamburger -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu-ul').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
