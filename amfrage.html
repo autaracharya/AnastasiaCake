@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bestellanfrage – Anastasia Torten</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
-
   <style>
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(to bottom right, #fff0f5, #ffe4ec);
       color: #333;
     }
-
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -25,20 +22,14 @@
       border-bottom: 1px solid #eee;
       flex-wrap: wrap;
     }
-
-    .logo img {
-      height: 80px;
-    }
-
+    .logo img { height: 80px; }
     .menu-ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       margin: 0;
       padding: 0;
     }
-
     .menu-ul li a {
       text-decoration: none;
       color: #444;
@@ -46,11 +37,7 @@
       font-size: 16px;
       transition: color 0.3s;
     }
-
-    .menu-ul li a:hover {
-      color: #d44c7c;
-    }
-
+    .menu-ul li a:hover { color: #d44c7c; }
     .form-container {
       background-color: #fff;
       padding: 30px;
@@ -59,19 +46,16 @@
       margin: 60px auto;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-
     .form-container h2 {
       text-align: center;
       color: #c13f75;
       margin-bottom: 20px;
     }
-
     label {
       font-weight: 600;
       display: block;
       margin: 15px 0 5px;
     }
-
     input, select, textarea {
       width: 100%;
       padding: 12px;
@@ -80,26 +64,11 @@
       border-radius: 8px;
       transition: border-color 0.3s, box-shadow 0.3s;
     }
-
     input:focus, select:focus, textarea:focus {
       border-color: #ff85a2;
       box-shadow: 0 0 5px rgba(255, 133, 162, 0.3);
       outline: none;
     }
-
-    input.invalid, select.invalid, textarea.invalid {
-      border: 2px solid #ff4d4f !important;
-      background-color: #fff5f5;
-    }
-
-    input.invalid::placeholder {
-      color: #ff4d4f;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
     button {
       margin-top: 20px;
       width: 100%;
@@ -113,11 +82,8 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-
-    button:hover {
-      background-color: #e05278;
-    }
-
+    button:hover { background-color: #e05278; }
+    small { color: red; display: none; }
     .modal {
       display: none;
       position: fixed;
@@ -128,7 +94,6 @@
       justify-content: center;
       align-items: center;
     }
-
     .modal-content {
       background: #fff;
       padding: 30px 40px;
@@ -137,26 +102,16 @@
       max-width: 400px;
       width: 90%;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 0.4s ease;
     }
-
     .modal-content h2 {
       color: #2f8734;
       font-size: 1.6rem;
       margin-bottom: 10px;
     }
-
     .modal-content p {
       font-size: 1rem;
       color: #333;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ✅ ADDED: Hamburger icon */
     .hamburger {
       display: none;
       font-size: 30px;
@@ -165,25 +120,18 @@
       color: #333;
       padding: 0 15px;
     }
-
     @media (max-width: 600px) {
       .navbar {
         padding: 20px;
         flex-direction: column;
         align-items: flex-start;
       }
-
-      .logo img {
-        height: 60px;
-      }
-
+      .logo img { height: 60px; }
       .form-container {
         padding: 25px;
         margin: 30px 15px;
       }
     }
-
-    /* ✅ ADDED: Responsive navbar logic */
     @media (max-width: 768px) {
       .hamburger {
         display: block;
@@ -191,11 +139,7 @@
         right: 20px;
         top: 30px;
       }
-
-      .navbar {
-        position: relative;
-      }
-
+      .navbar { position: relative; }
       .menu-ul {
         flex-direction: column;
         width: 100%;
@@ -206,11 +150,7 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         border-radius: 8px;
       }
-
-      .menu-ul.show {
-        display: flex;
-      }
-
+      .menu-ul.show { display: flex; }
       .menu-ul li {
         width: 100%;
         text-align: left;
@@ -220,9 +160,7 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- ✅ REPLACED navbar with responsive one -->
   <div class="navbar">
     <div class="logo">
       <img src="img/Logo1.png" alt="Anastasia Torten Logo" />
@@ -240,14 +178,19 @@
 
   <div class="form-container">
     <h2>Bestellanfrage</h2>
-    <form id="orderForm">
-      <!-- form fields stay the same -->
+    <form id="orderForm" novalidate>
       <label for="fullname">Vor-/Nachname*</label>
-      <input type="text" id="fullname" name="fullname" placeholder="Pflichtfeld*" required />
+      <input type="text" id="fullname" name="fullname" required />
+      <small id="nameError">Bitte geben Sie einen gültigen Namen ein (nur Buchstaben).</small>
+
       <label for="phone">Telefonnummer*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Pflichtfeld*" required />
+      <input type="tel" id="phone" name="phone" required />
+      <small id="phoneError">Bitte geben Sie eine gültige Telefonnummer ein (nur Ziffern, mind. 7 Stellen).</small>
+
       <label for="email">Email*</label>
-      <input type="email" id="email" name="email" placeholder="Pflichtfeld*" required />
+      <input type="email" id="email" name="email" required />
+      <small id="emailError">Bitte geben Sie eine gültige E-Mail-Adresse ein.</small>
+
       <label for="occasion">Anlass</label>
       <select id="occasion" name="occasion">
         <option value="hochzeit">Hochzeit</option>
@@ -260,10 +203,13 @@
         <option value="weihnachten">Weihnachten</option>
         <option value="silvester">Silvester</option>
       </select>
+
       <label for="date">Wann*</label>
       <input type="date" id="date" name="date" required />
+
       <label for="guests">Personen*</label>
-      <input type="number" id="guests" name="guests" placeholder="Pflichtfeld*" required />
+      <input type="number" id="guests" name="guests" required min="1" />
+
       <label for="category">Kategorien</label>
       <select id="category" name="category">
         <option value="torte">Torte</option>
@@ -273,13 +219,14 @@
         <option value="macarons">Macarons</option>
         <option value="klassiker">Klassiker</option>
       </select>
+
       <label for="message">Ihre Nachricht</label>
-      <textarea id="message" name="message" rows="4" placeholder="Weitere wichtige Informationen..."></textarea>
+      <textarea id="message" name="message" rows="4"></textarea>
+
       <button type="submit">Anfrage Senden</button>
     </form>
   </div>
 
-  <!-- Modal -->
   <div id="thankYouModal" class="modal">
     <div class="modal-content">
       <h2>🎉 Danke für Ihre Bestellung!</h2>
@@ -287,31 +234,50 @@
     </div>
   </div>
 
-  <!-- ✅ JS toggle function added -->
   <script>
     function toggleMenu() {
       document.querySelector('.menu-ul').classList.toggle('show');
     }
 
     const form = document.getElementById("orderForm");
+    const nameInput = document.getElementById("fullname");
+    const phoneInput = document.getElementById("phone");
+    const emailInput = document.getElementById("email");
+
+    const nameError = document.getElementById("nameError");
+    const phoneError = document.getElementById("phoneError");
+    const emailError = document.getElementById("emailError");
+
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
-      const requiredFields = ["fullname", "phone", "email", "date", "guests"];
-      let hasError = false;
-      requiredFields.forEach((id) => {
-        const input = document.getElementById(id);
-        const value = input.value.trim();
-        if (!value) {
-          input.classList.add("invalid");
-          hasError = true;
-        } else {
-          input.classList.remove("invalid");
-        }
-      });
 
-      if (hasError) return;
+      let valid = true;
 
-      const formData = new FormData(this);
+      if (!/^[A-Za-zÄÖÜäöüß\s]+$/.test(nameInput.value.trim())) {
+        nameError.style.display = "block";
+        valid = false;
+      } else {
+        nameError.style.display = "none";
+      }
+
+      if (!/^\d{7,}$/.test(phoneInput.value.trim())) {
+        phoneError.style.display = "block";
+        valid = false;
+      } else {
+        phoneError.style.display = "none";
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.style.display = "block";
+        valid = false;
+      } else {
+        emailError.style.display = "none";
+      }
+
+      if (!valid) return;
+
+      const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
       const response = await fetch("/submit", {
@@ -321,12 +287,9 @@
       });
 
       if (response.ok) {
-        this.reset();
-        const modal = document.getElementById("thankYouModal");
-        modal.style.display = "flex";
-        setTimeout(() => {
-          window.location.href = "index.html";
-        }, 4000);
+        form.reset();
+        document.getElementById("thankYouModal").style.display = "flex";
+        setTimeout(() => window.location.href = "index.html", 4000);
       } else {
         alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
       }
