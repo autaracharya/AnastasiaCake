@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const generateOrderPDF = require("../utils/generatePDF");
+// const generateOrderPDF = require("../utils/generatePDF"); // ❌ Commented out
 const path = require("path");
-const fs = require("fs");
+// const fs = require("fs"); // ❌ Not needed without PDF
 
 require("dotenv").config();
 
@@ -18,22 +18,21 @@ const transporter = nodemailer.createTransport({
 router.post("/", async (req, res) => {
   const data = req.body;
 
-
-
   const recipients = [process.env.EMAIL];
   if (data.email && data.email.includes("@")) {
     recipients.unshift(data.email);
   }
-  
-    // ✅ Ensure temp folder exists + generate PDF
+
+  // ❌ PDF generation temporarily disabled
+  /*
   const tempFolder = path.join(__dirname, "../temp");
   if (!fs.existsSync(tempFolder)) {
     fs.mkdirSync(tempFolder);
   }
-//edgehduieh9efw
-  // ✅ Generate the PDF and save temporarily
+
   const pdfPath = path.join(__dirname, "../temp", `order-${Date.now()}.pdf`);
   await generateOrderPDF(data, pdfPath);
+  */
 
   const mailOptions = {
     from: `"Anastasia Torten" <${process.env.EMAIL}>`,
@@ -47,22 +46,17 @@ router.post("/", async (req, res) => {
         <p><strong>Datum:</strong> ${data.date || "–"}</p>
         <p><strong>Personen:</strong> ${data.guests || "–"}</p>
         <p><strong>Kategorie:</strong> ${data.category || "–"}</p>
+        <p><strong>Anlass:</strong> ${data.occasion || "–"}</p>
         <p><strong>Nachricht:</strong><br>${data.message || "–"}</p>
       </div>
-    `,
-    attachments: [
-      {
-        filename: "Bestellung.pdf",
-        path: pdfPath,
-        contentType: "application/pdf"
-      }
-    ]
+    `
+    // attachments: [ { ... } ] ❌ removed
   };
 
   try {
     await transporter.sendMail(mailOptions);
     console.log("Email sent to:", recipients);
-    fs.unlinkSync(pdfPath); // Clean up after sending
+    // fs.unlinkSync(pdfPath); // ❌ Removed cleanup
     res.status(200).send("Mail sent");
   } catch (err) {
     console.error("EMAIL ERROR:", err);
