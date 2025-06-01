@@ -38,7 +38,11 @@ async function generateOrderPDF(data, outputPath) {
     </html>
   `;
 
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
   const page = await browser.newPage();
   await page.setContent(htmlContent, { waitUntil: "networkidle0" });
   await page.pdf({ path: outputPath, format: "A4", printBackground: true });
